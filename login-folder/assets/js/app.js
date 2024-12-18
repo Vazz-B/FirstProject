@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const signInForm = document.querySelector(".sign-in-form");
   const signUpForm = document.querySelector(".sign-up-form");
 
-  // Fungsi untuk register (menyimpan data ke Local Storage)
+  // Fungsi untuk registrasi (menyimpan data ke Local Storage)
   if (signUpForm) {
     signUpForm.addEventListener("submit", (e) => {
       e.preventDefault(); // Mencegah reload halaman default form
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
         users.push({ username, email, password });
         localStorage.setItem("users", JSON.stringify(users));
         alert("Registrasi berhasil! Akun telah dibuat.");
-        window.location.href = "../main-folder/index.html"; // Redirect ke halaman utama
+        window.location.href = "/main-folder/index.html"; // Redirect ke halaman utama setelah registrasi
       }
     });
   }
@@ -89,8 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (isValidUser) {
         alert("Login berhasil!");
-        // Redirect ke halaman utama setelah login
-        window.location.href = "../main-folder/index.html"; // Pastikan path ini benar
+        window.location.href = "/main-folder/index.html"; // Redirect ke halaman utama setelah login
       } else {
         alert("Username atau password salah!");
       }
