@@ -38,7 +38,7 @@ bullets.forEach((bullet) => {
   bullet.addEventListener("click", moveSlider);
 });
 
-// app.js
+// Ke Halaman Utama
 document.addEventListener("DOMContentLoaded", () => {
   const signInForm = document.querySelector(".sign-in-form");
   const signUpForm = document.querySelector(".sign-up-form");
@@ -89,7 +89,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (isValidUser) {
         alert("Login berhasil!");
-        window.location.href = "../main-folder/index.html"; // Redirect ke halaman utama
+        // Redirect ke halaman utama setelah login
+        window.location.href = "../main-folder/index.html"; // Pastikan path ini benar
       } else {
         alert("Username atau password salah!");
       }
